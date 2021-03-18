@@ -1,6 +1,37 @@
+# Created by https://www.toptal.com/developers/gitignore/api/windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows
 
-# Created by https://www.toptal.com/developers/gitignore/api/eclipse,java
-# Edit at https://www.toptal.com/developers/gitignore?templates=eclipse,java
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.toptal.com/developers/gitignore/api/windows
+
+
+# Created by https://www.toptal.com/developers/gitignore/api/eclipse
+# Edit at https://www.toptal.com/developers/gitignore?templates=eclipse
 
 ### Eclipse ###
 .metadata
@@ -68,7 +99,8 @@ local.properties
 # Spring Boot Tooling
 .sts4-cache/
 
-### Java ###
+# End of https://www.toptal.com/developers/gitignore/api/eclipse
+
 # Compiled class file
 *.class
 
@@ -88,10 +120,8 @@ local.properties
 *.ear
 *.zip
 *.tar.gz
-*.rar
+.rar
 Servers
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-# End of https://www.toptal.com/developers/gitignore/api/eclipse,java
+hs_err_pid
