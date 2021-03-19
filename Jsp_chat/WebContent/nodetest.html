@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	// 웹소켓 객체 생성
+	const ws = new WebSocket("ws://localhost:3000");
+	
+	// 연결이 되면 서버에 메세지를 전송한다.
+	ws.onopen = function(event) {
+		
+		ws.send("서버연결");
+		
+	}
+	
+	// 서버로부터 메세지를 수신한다.
+	ws.onmessage = function(event) {
+		console.log("Server message : ", event.data);
+	}
+	
+	// error event handler
+	ws.onmessage = function(event) {
+		console.log("Server error message : ", event.data);
+	}
+	
+
+</script>
+
+
+</body>
+</html>
