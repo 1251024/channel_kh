@@ -12,12 +12,6 @@ body {
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
-
-div {
-	border: 1px solid;
-
-}
-
 #box {
 	height: 15%;
 	margin-top:3%;

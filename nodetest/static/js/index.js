@@ -18,14 +18,12 @@ socket.on('update', function(data) {
 	console.log(`${data.name}: ${data.message}`)
 })
 
-
 /* 전송 함수 */
 function send() {
 	// 입력되어 있는 데이터 가져오기
 	const message = document.getElementById('test').value
 	
 	// 가져왔으니 데이터를 빈칸으로 변경
-	
 	document.getElementById('test').value = ''
 	
 	// 서버로 message 이벤트 전달 + 데이터와 함께

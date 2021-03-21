@@ -23,7 +23,6 @@ app.use('/css', express.static('./static/css'))
 app.use('/js', express.static('./static/js'))
 
 /* Get 방식으로 / 경로에 접속하면 실행됨 8 */
-
 app.get('/', function(request,response) {
 	fs.readFile('./static/index.html', function(err, data){
 		if(err) {
@@ -56,8 +55,7 @@ io.sockets.on('connection', function(socket) {
 		console.log(data)
 		
 		/* 보낸 사람을 제외한 나머지 유저에게 메세지 전송 */
-		io.sockets.emit('update', data);
-		
+		io.sockets.emit('update', data);		
 	})
 	
 	/* 접속 종료 */
@@ -71,6 +69,6 @@ io.sockets.on('connection', function(socket) {
 })
 
 /* 서버를 8080 포트로 listen */
-server.listen(3001, function() {
+server.listen(3000, function() {
 	console.log('loading server...')
 })
