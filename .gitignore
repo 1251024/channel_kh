@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Created by https://www.toptal.com/developers/gitignore/api/windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows
 
@@ -101,6 +102,8 @@ local.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/eclipse
 
+=======
+>>>>>>> 47a78b3d7cfd0850cadd8beaa4b2d3f9dcac8f2d
 # Compiled class file
 *.class
 
@@ -124,4 +127,9 @@ local.properties
 Servers
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+<<<<<<< HEAD
 hs_err_pid
+=======
+hs_err_pid
+/.metadata/
+>>>>>>> 47a78b3d7cfd0850cadd8beaa4b2d3f9dcac8f2d
