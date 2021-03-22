@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 
-<% request.setCharacterEncoding("UTF-8"); %>    
-<% response.setContentType("text/html; charset=UTF-8"); %>
+<%
+request.setCharacterEncoding("UTF-8");
+%>
+<%
+response.setContentType("text/html; charset=UTF-8");
+%>
 
 <!DOCTYPE html>
 <html>
@@ -12,77 +16,76 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CHANNEL</title>
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="image/main/channel_icon2.png">
-    <link href="./css/main.css" rel="stylesheet">
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<link rel="icon" href="image/main/channel_icon2.png">
+<link href="./css/main.css" rel="stylesheet">
 
-    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
 </head>
-<% 
-	
-	String id = request.getParameter("id");
-	String name = request.getParameter("name");
-	String dept = request.getParameter("dept");
-
+<%
+String id = request.getParameter("id");
+String name = request.getParameter("name");
+String dept = request.getParameter("dept");
 %>
 
 <%
-	//String id = "";
-	//if (session.getAttribute("id") != null) {
-	//	id = (String) session.getAttribute("id");
-	//}
+//String id = "";
+//if (session.getAttribute("id") != null) {
+//	id = (String) session.getAttribute("id");
+//}
 
-	//String nick = "";
-	//if (session.getAttribute("nick") != null) {
-	//	nick = (String) session.getAttribute("nick");
-	//} else {
-	//	nick = "NICK NULL";
-	//}
+//String nick = "";
+//if (session.getAttribute("nick") != null) {
+//	nick = (String) session.getAttribute("nick");
+//} else {
+//	nick = "NICK NULL";
+//}
 %>
 
 <body>
-	
+
 	<div class="col-xs-12" style="height: 100%;">
 		<div class="col-xs-12" style="height: 10%;">
-			<span><%=id %>(<%=name %>)님이 접속하였습니다.</span>
+			<span><%=id%>(<%=name%>)님이 접속하였습니다.</span>
 		</div>
 		<div class="col-xs-4" style="height: 90%;">
 			<div class="col-xs-4" style="height: 100%;">
-				<div id="box" class="col-xs-8" >활동</div>
-				<div id="box" class="col-xs-8" >메세지</div>
-				<div id="box" class="col-xs-8" >채널</div>
-				<div id="box" class="col-xs-8" >일정</div>
-				<div id="box" class="col-xs-8" >통화</div>
-				<div id="box" class="col-xs-8" >더보기</div>
+				<div id="box" class="col-xs-8">활동</div>
+				<div id="box" class="col-xs-8">메세지</div>
+				<div id="box" class="col-xs-8">채널</div>
+				<div id="box" class="col-xs-8">일정</div>
+				<div id="box" class="col-xs-8">통화</div>
+				<div id="box" class="col-xs-8">더보기</div>
 			</div>
 			<div class="col-xs-8" style="height: 100%;">
-				<div class="col-xs-12" style="height: 50%;" >채널선택창</div>
-				<div class="col-xs-12" style="height: 50%;" >다이렉트메세지</div>
+				<div class="col-xs-12" style="height: 50%;">채널선택창</div>
+				<div class="col-xs-12" style="height: 50%;">다이렉트메세지</div>
 			</div>
-			
+
 		</div>
 		<div class="col-xs-8" style="height: 90%;">
 			<div class="col-xs-6" style="height: 100%;">
-				<div class="col-xs-12" style="background: white; height: 50%;">
-					<div id="chatarea" class="col-xs-12" style="background: white; height: 80%; overflow: auto">
-					</div>
-					<div id="texteditor" class="col-xs-12" style="background: white; height: 20%; border-top: 1px solid black;">
-						<input id="inputMessage" type="text" onkeydown="if(event.keyCode==13){send();}" class="col-xs-10" style="background: gray; height: 100%; border: 1px solid black;">
-						<input type="submit" value="전송" onclick="send();" class="col-xs-2" 
-						style="background: gray; height: 100%; border: 1px solid black; text-align: center;"
-						>
+				<div class="col-xs-12" style="background: white; height: 100%;">
+					<div id="chatarea" class="col-xs-12"
+						style="background: white; height: 90%; overflow: auto"></div>
+					<div id="texteditor" class="col-xs-12"
+						style="background: white; height: 5%; border-top: 1px solid black;">
+						<input id="inputMessage" type="text"
+							onkeydown="if(event.keyCode==13){send();}" class="col-xs-10"
+							style="background: gray; height: 100%; border: 1px solid black;">
+						<input type="submit" value="전송" onclick="send();" class="col-xs-2"
+							style="background: gray; height: 100%; border: 1px solid black; text-align: center;">
 					</div>
 				</div>
-				<div class="col-xs-12" style="height: 50%;">텍스트에어리어</div>
 			</div>
 			<div class="col-xs-6" style="height: 100%;">TODOLIST</div>
-		</div>		
+		</div>
 	</div>
-	
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script type="text/javascript">
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
   //웹소켓 설정
 	var webSocket = new WebSocket('ws://localhost:8787/Jsp_chat/websocket');
 	//var webSocket = new WebSocket('ws://localhost:8080/프로젝트명/broadcasting');
@@ -103,14 +106,14 @@
 	//	OnClose는 웹 소켓이 끊겼을 때 동작하는 함수.
 	function onClose(event){
 		var div=document.createElement('div');
-		
 		//접속했을 때 접속자들에게 알릴 내용.
-		webSocket.send("<%= name%> is DisConnected\n");
+		div.innerHTML = "<%=name%> is DisConnected\n";
+		//webSocket.send();
 	}
 
 	//	OnMessage는 클라이언트에서 서버 측으로 메시지를 보내면 호출되는 함수.
 	function onMessage(event) {
-
+		
 		//클라이언트에서 날아온 메시지를 |\| 단위로 분리한다
 		var message = event.data.split("|\|");
 		
@@ -118,7 +121,7 @@
 			//금방 보낸 이가 다시 보낼경우 보낸이 출력 없도록 함.
 			if(message[0] != re_send){
 				//"chatarea"에 붙이기
-				var who = document.createElement('div');
+				const who = document.createElement('div');
 
 				who.style["padding"]="3px";
 				who.style["margin-left"]="3px";
@@ -174,10 +177,10 @@
 		div.style["border"]="1px solid white";
 		div.style["float"]="left";
 		
-		div.innerHTML = "<%=name %>님 메세지를 입력해주세요.";
+		div.innerHTML = "<%=name%>님 메세지를 입력해주세요.";
 		document.getElementById('chatarea').appendChild(div);
 		
-		var clear=document.createElement('div');
+		const clear=document.createElement('div');
 		clear.style["clear"]="both";
 		document.getElementById('chatarea').appendChild(clear);
 		
@@ -192,9 +195,33 @@
 	
 	// send 함수를 통해서 웹소켓으로 메시지를 보낸다.
 	function send() {
-
+		
 		//inputMessage가 있을때만 전송가능
-		if(inputMessage.value!=""){
+		if(inputMessage.value != ""){
+			
+			function  getParameterValues() {
+				
+				var name = "<%=name %>";
+				var content = inputMessage.value;
+				
+				return "?command=insert&name=" + name + "&content=" + content;
+			}
+			
+			$.ajax({
+				url:"chat.do"+getParameterValues(),
+				dataType: "text",
+				method: "get",
+				success:function(msg){
+					console.log(msg.name)
+					console.log(msg.content)
+					console.log("DB저장 완료")
+				},
+				error: function(){
+					alert("통신 실패")
+				}
+				
+				
+			})
 			
 			//	서버에 보낼때 날아가는 값.
 			webSocket.send("<%=name%>|\|" + inputMessage.value);
@@ -216,7 +243,7 @@
 			//div에 innerHTML로 문자 넣기
 			div.innerHTML = inputMessage.value;
 			document.getElementById('chatarea').appendChild(div);
-
+			
 			//clear div 추가
 			var clear = document.createElement('div');
 			clear.style["clear"] = "both";
@@ -232,10 +259,10 @@
 			chatarea.scrollTop = chatarea.scrollHeight;
 			
 			//	금방 보낸 사람을 임시 저장한다.
-			re_send = "<%=name%>";
-		}//inputMessage가 있을때만 전송가능 끝.
-		
-	}
-    </script>		
+			re_send = "<%=name %>";
+			}//inputMessage가 있을때만 전송가능 끝.
+
+		}
+	</script>
 </body>
 </html>

@@ -38,7 +38,7 @@ public class WebSocket {
 		System.out.println(session);
 		clients.add(session);
 	}
-
+	
 	//@OnClose는 접속이 끊겼을때 처리입니다.
 	@OnClose
 	public void onClose(Session session) {
