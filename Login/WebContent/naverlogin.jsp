@@ -4,11 +4,9 @@
 <% request.setCharacterEncoding("UTF-8"); %>
 <% response.setContentType("text/html; charset=UTF-8"); %>    
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-<c:import url="java.net.URLEncoder"></c:import>
-<c:import url="java.security.SecureRandom"></c:import>
-<c:import url="java.math.BigInteger"></c:import>
+<%@ page import ="java.net.URLEncoder" %>
+<%@ page import ="java.security.SecureRandom" %>
+<%@ page import ="java.math.BigInteger" %>
     
 <!DOCTYPE html>
 <html>
@@ -18,6 +16,17 @@
 </head>
 <body>
 
+<% 
+	String clientId="YOUR_CLIENT_ID" ; //"애플리케이션 클라이언트 아이디값";
+	redirectURI = URLEncoder.encode("YOUR_CALLBACK_URL", "UTF-8");
+	SecureRandom random= new SecureRandom();
+	state = new BigInteger(130, random).toString();
+	apiURL= "https://nid.naver.com/oauth2.0/authorize?response_type=code" +="&client_id=" + clientId;
+	redirectURI;
+	state;
+	session.setAttribute("state", state); %>
+  
+<a href="<%=apiURL%>"><img height="50" src="http://static.nid.naver.com/oauth/small_g_in.PNG"/></a>
 
 
 
