@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e67d1caa157197d9eabd8af3f471fc7486ab3
 # Created by https://www.toptal.com/developers/gitignore/api/windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows
 
@@ -102,8 +105,11 @@ local.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/eclipse
 
+<<<<<<< HEAD
 =======
 >>>>>>> 47a78b3d7cfd0850cadd8beaa4b2d3f9dcac8f2d
+=======
+>>>>>>> 8e2e67d1caa157197d9eabd8af3f471fc7486ab3
 # Compiled class file
 *.class
 
@@ -132,4 +138,8 @@ hs_err_pid
 =======
 hs_err_pid
 /.metadata/
+<<<<<<< HEAD
 >>>>>>> 47a78b3d7cfd0850cadd8beaa4b2d3f9dcac8f2d
+=======
+
+>>>>>>> 8e2e67d1caa157197d9eabd8af3f471fc7486ab3
